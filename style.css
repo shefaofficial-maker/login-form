@@ -1,5 +1,5 @@
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -56,7 +56,7 @@ body {
 
 @keyframes animate {
   0% {transform: rotate(0deg);}
-  100%{transform: rotate(-360deg);}
+  100% {transform: rotate(-360deg);}
 }
 @keyframes animate2 {
   0% { transform: rotate(360deg); }
@@ -68,7 +68,7 @@ body {
 }
 
 .Login {
-  position:absolute;
+  position: absolute;
   width: 280px;
   background: #c28787;
   border-radius: 10px;
@@ -76,14 +76,17 @@ body {
   text-align: center;
   box-shadow: 0 0 30px rgba(161, 156, 156, 0.6);
 }
+
 .Login h2 {
   color: #d3d0d0;
   margin-bottom: 30px;
 }
+
 .inputBx {
   position: relative;
   margin-bottom: 20px;
 }
+
 .inputBx input[type="text"],
 .inputBx input[type="password"] {
   width: 100%;
@@ -111,11 +114,13 @@ body {
 .inputBx input[type="submit"]:hover {
   background: linear-gradient(45deg, #ff9966, #ff416c);
 }
+
 .links {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
+
 .links a {
   color: #141212;
   text-decoration: none;
@@ -124,4 +129,60 @@ body {
 }
 .links a:hover {
   color: #080808;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-left: 50px; 
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    justify-content: center; 
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-position: center;
+  }
+
+  .ring {
+    width: 320px;
+    height: 320px;
+  }
+
+  .Login {
+    width: 90%;
+    max-width: 320px;
+    padding: 30px 20px;
+  }
+
+  .Login h2 {
+    font-size: 22px;
+  }
+
+  .inputBx input {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ring {
+    width: 260px;
+    height: 260px;
+  }
+
+  .Login {
+    padding: 25px 15px;
+  }
+
+  .Login h2 {
+    font-size: 20px;
+  }
 }
