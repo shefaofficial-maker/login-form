@@ -1,0 +1,127 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background: url("img.jpg") no-repeat center center/cover; 
+  padding-left: 100px;
+}
+
+.ring {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff2;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: animate2 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: animate3 10s linear infinite;
+}
+
+.ring i:nth-child(1) {
+  border: 2px solid rgb(29, 53, 6);
+  filter: drop-shadow(0 0 20px rgb(29, 53, 6));
+}
+.ring i:nth-child(2) {
+  border: 2px solid rgb(117, 65, 65);
+  filter: drop-shadow(0 0 20px rgb(117, 65, 65));
+}
+.ring i:nth-child(3) {
+  border: 2px solid rgb(59, 59, 4);
+  filter: drop-shadow(0 0 20px rgb(59, 59, 4));
+}
+
+@keyframes animate {
+  0% {transform: rotate(0deg);}
+  100%{transform: rotate(-360deg);}
+}
+@keyframes animate2 {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes animate3 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.Login {
+  position:absolute;
+  width: 280px;
+  background: #c28787;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(161, 156, 156, 0.6);
+}
+.Login h2 {
+  color: #d3d0d0;
+  margin-bottom: 30px;
+}
+.inputBx {
+  position: relative;
+  margin-bottom: 20px;
+}
+.inputBx input[type="text"],
+.inputBx input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #555;
+  color: #fff;
+  font-size: 16px;
+}
+
+.inputBx input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(45deg, #ff416c, #ff9966);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.inputBx input[type="submit"]:hover {
+  background: linear-gradient(45deg, #ff9966, #ff416c);
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.links a {
+  color: #141212;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.links a:hover {
+  color: #080808;
+}
